@@ -1,0 +1,11 @@
+<Alloy>
+	<Window class="container" backgroundImage="/images/fondo.jpg">
+		<View backgroundColor="black" opacity="0.4"></View>
+		<Label id="lbl_main">Bienvenido</Label>
+		<View height="Ti.UI.SIZE" layout="vertical"  >
+			<Widget src="input-materialdesign" titleHint="Usuario" colorFocus="red" colorPattern="#BDBDBD" colorFont="white" id="txt_username"/>
+			<Widget src="input-materialdesign" titleHint="Contraseña" colorFocus="red" colorPattern="#BDBDBD" colorFont="white"   id="txt_password" password="true" top="20"/>
+			<Button top="40" height="45" width="60%" title="Entrar" onClick="login"></Button>
+		</View>
+	</Window>
+</Alloy>

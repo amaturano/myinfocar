@@ -1,0 +1,85 @@
+<Alloy>
+	<TabGroup>
+		<Tab title=" Dashboard" icon="/images/dashboard.png">
+			<Window >
+				<ImageView width="60" height="60" image="/images/user.png" left="10" top="15"></ImageView>
+				<Label  id="lbl_name"></Label>
+				
+				<View layout="vertical" height="Ti.UI.SIZE" width="90%" id="vista_autos" top="100">
+					<Label left="0" class="title" color="gray">Mis autos</Label>
+					<ImageView top="30" image="/images/sad.png" id="img_sad"></ImageView>
+					<Label top="30" color="gray" id="lbl_sin_autos"> No se encontrarón autos registrados, para dar de alta un nuevo vehiculo ve a la sección nuevo auto y captura la información requerida</Label>
+					
+					<Require src="autos_view"></Require>
+				</View>
+				
+			</Window>
+		</Tab>
+		 
+		<Tab title=" Perfil" icon="/images/profile.png">
+			<Window layout="vertical" id="perfil_win">
+				<ScrollView layout="vertical" width="100%" id="scrll_main">
+					<Button height="Ti.UI.SIZE" width="Ti.UI.SIZE"  bandera="0" onClick="editUser" title=" Editar" image="/images/edit.png" backgroundColor="transparent" top="10" right="10"></Button>
+					<View height="Ti.UI.SIZE" layout="vertical">
+						<ImageView id="img_profile" image="/images/user.png" top="20" height="170" width="170"></ImageView> 
+						<Button id="btn_photoProfile" onClick="openCam" enabled="false" image="/images/photo.png" top="15"  backgroundColor="transparent"></Button>
+					</View>
+					<Label class="pin_tag">Nombre</Label>
+					<TextField  id="txt_name" class="textfield_large" hintText="Nombre del usuario"></TextField>
+					<Label class="pin_tag">Apellido Paterno</Label>
+					<TextField id="txt_AP" class="textfield_large" hintText="Apellido Paterno"></TextField>
+					<Label class="pin_tag">Apellido Materno</Label>
+					<TextField id="txt_AM" class="textfield_large" hintText="Apellido Materno"></TextField>
+					<Label class="pin_tag">Email</Label>
+					<TextField id="txt_email" class="textfield_large" hintText="Ej. example@example.com"></TextField>
+					<Label class="pin_tag">Nickname para login</Label>
+					<TextField id="txt_nick" class="textfield_large" hintText="Nickname"></TextField>
+					<Label class="pin_tag">Contraseña</Label>
+					<TextField id="txt_pass" class="textfield_large" passwordMask="true" hintText="Contraseña"></TextField>
+					<Label class="pin_tag">Número de licencia</Label>
+					<TextField id="txt_licencia" class="textfield_large" hintText="Ej. 34215F421"></TextField>
+					<Label class="pin_tag">Tipo de licencia</Label>
+					<TextField id="txt_tipoLic" class="textfield_large" hintText="Ej. Chofer clase 1"></TextField>
+					<Button enabled="false" id="btn_licencia" onClick="take_licencia" class="camera_button_small" top="10" title="  Agregar foto de licencia"></Button>
+					<View height="Ti.UI.SIZE" width="Ti.UI.SIZE" id="view_licencia"></View>
+					<Label class="pin_tag">Teléfono de contácto</Label>
+					<TextField id="txt_phone" class="textfield_large" hintText="xxx-xxx-xx-xx"></TextField>
+					<Button enabled="false" id="btn_seguroAuto" onClick="nuevo_seguro" top="30" image="/images/plus.png" backgroundColor="transparent" title="  Seguros de vida"></Button>
+					<View height="Ti.UI.SIZE" top="20" id="noRegister">
+						<Label textAlign="center">Sin seguros aun registrados\n haz click en el boton + para agregar uno</Label> 
+					</View>
+					<Require src="view_insurance"></Require>
+				</ScrollView>
+			</Window>
+		</Tab>
+		
+		<Tab title=" Nuevo auto" icon="/images/new_auto.png">
+			<Window >
+				<ScrollView layout="vertical">
+					<View height="Ti.UI.SIZE" layout="vertical">
+						<ImageView  id="photo_car" image="/images/car.png" top="20" height="170" width="170"></ImageView>
+						<Button onClick="take_car" class="camera_button" top="15"></Button>
+					</View>
+					<Label class="pin_tag">Marca</Label>
+					<TextField id="txt_na_marca" class="textfield_large" hintText="Ej. Nissan, Toyota, Jeep"></TextField>
+					<Label class="pin_tag">Modelo</Label>
+					<TextField id="txt_na_modelo" class="textfield_large" hintText="Ej. Tsuru, Cambry, Compass"></TextField>
+					<Label class="pin_tag">Año</Label>
+					<TextField id="txt_na_year" class="textfield_large" hintText="Ej. 2016"></TextField>
+					<Label class="pin_tag">Número de placas</Label>
+					<TextField id="txt_na_placas" class="textfield_large" hintText="Ej. FTG-1546"></TextField>
+					<Label class="pin_tag">Tipo de vehículo</Label>
+					<TextField id="txt_na_tipo" class="textfield_large" hintText="Ej. SUV, automovil, pick-up"></TextField>
+					<Label class="pin_tag">Número de REPUVE</Label>
+					<TextField id="txt_na_repuve" class="textfield_large" hintText="Ej. 123554FG54"></TextField>
+					
+					<Button onClick="take_repuve"  class="camera_button_small" top="10" title="  Agregar foto de REPUVE"></Button>
+					<View height="Ti.UI.SIZE" width="Ti.UI.SIZE" id="view_repuve"></View>
+					<Label class="pin_tag">Número VIN</Label>
+					<TextField id="txt_na_vin" class="textfield_large" hintText="Plaquita en el tablero"></TextField>	
+					<Button class="save_button" top="20" onClick="save_auto"></Button>
+				</ScrollView>
+			</Window>
+		</Tab>
+	</TabGroup>
+</Alloy>

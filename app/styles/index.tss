@@ -1,0 +1,16 @@
+".container": {
+	backgroundColor:"#E6E6E6"
+},
+
+"Label":{
+	width:"90%",
+	textAlign:"left",
+	top:10,
+	font:{
+		fontSize:16
+	}
+},
+"#lbl_main":{
+	font:{fontSize:40},
+	color:'white'
+}

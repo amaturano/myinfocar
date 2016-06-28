@@ -1,0 +1,20 @@
+<Alloy>
+	<Window >
+		<View height="Ti.UI.SIZE" width="Ti.UI.SIZE">
+			<ImageView id="img_main" image="/images/fondo2.JPG"  ></ImageView>
+		</View>
+		<View class="container" layout="vertical">
+			<Label top="20" color="white" class="title">Registrate</Label>
+			<ScrollView layout="vertical">
+				<Widget top="30" src="input-materialdesign" titleHint="Nombre" colorFocus="red" colorPattern="#BDBDBD" colorFont="white" id="txt_name"/>
+				<Widget top="10" src="input-materialdesign" titleHint="Apellido Paterno" colorFocus="red" colorPattern="#BDBDBD" colorFont="white"  id="txt_apellidoP"/>		
+				<Widget top="10" src="input-materialdesign" titleHint="Apellido Materno" colorFocus="red" colorPattern="#BDBDBD" colorFont="white" id="txt_apellidoM"/>			
+				<Widget top="10" src="input-materialdesign" titleHint="Nickname para login" colorFocus="red" colorPattern="#BDBDBD" colorFont="white" id="txt_users"/>			
+				<Widget top="10" src="input-materialdesign" titleHint="Contraseña" colorFocus="red" colorPattern="#BDBDBD" colorFont="white"  id="txt_pass1" password="true" top="20"/>		
+				<Widget top="10" src="input-materialdesign" titleHint="Repetir-contraseña" colorFocus="red" colorPattern="#BDBDBD" colorFont="white" id="txt_pass2" password="true" top="20"/>
+				
+				<Button class="button_large" title="Registrar" onClick="register" top="20"></Button>
+			</ScrollView>	
+		</View>
+	</Window>
+</Alloy>

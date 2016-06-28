@@ -1,0 +1,23 @@
+<Alloy>
+	<Collection src="autos" />
+	<View height="Ti.UI.SIZE" width="100%">
+		<ListView id="list_autos" defaultItemTemplate="customTemplate" height="Ti.UI.SIZE">
+			<Templates>
+				<ItemTemplate name="customTemplate">
+					<View  height="120" width="Ti.UI.FILL">
+						<ImageView height="60" width="60" image="/images/sport_car.png" left="5"></ImageView>
+						<Label bindId="nameAuto" id="lbl_title"></Label>
+						<Label bindId="year" top="60" left="80"></Label>
+						<Label bindId="placas" color="#009688" top="85" left="80"></Label>
+						<Button bindId="eliminar" height="40" width="40"  right="0" image="/images/delete.png" backgroundColor="transparent"></Button>
+						<Button bindId="editar" height="40" width="40"  right="40" image="/images/edit_auto.png" backgroundColor="transparent"></Button>
+					</View>		
+				</ItemTemplate>
+			</Templates>
+			
+			<ListSection dataCollection="autos" id="section_autos">
+				<ListItem idx="{id}" nameAuto:text="{modelo}" year:text="{year}" placas:text="{placas}" width="100%"></ListItem>
+			</ListSection>
+		</ListView>
+	</View>
+</Alloy>

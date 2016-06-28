@@ -1,0 +1,25 @@
+<Alloy>
+	<Collection src="autos_insurance" />
+	<View height="Ti.UI.SIZE">
+		<ListView id="list_seguros" defaultItemTemplate="customTemplate" height="Ti.UI.SIZE">
+			<Templates>
+				<ItemTemplate name="customTemplate">
+					<View layout="vertical" height="Ti.UI.SIZE">
+						<Label bindId="nameInsurance" id="lbl_title"></Label>
+						<Label class="subtitles">Número de seguro o cliente:</Label>
+						<Label class="normalFont" bindId="noSeguro"></Label>
+						<Label class="subtitles">Vigencia:</Label>
+						<Label class="normalFont" bindId="vigenciax"></Label>
+						<Label class="subtitles">Teléfono:</Label>
+						<Label class="normalFont" color="#009688" bindId="telefonox"></Label>
+					</View>	
+					<Button bindId="eliminar"  right="5" image="/images/delete.png" backgroundColor="transparent"></Button>	
+				</ItemTemplate>
+			</Templates>
+			
+			<ListSection dataCollection="autos_insurance" id="section_personas" dataFilter="filter">
+				<ListItem idx="{id}" cel="{telefono}" nameInsurance:text="{nombre}" noSeguro:text="{no_seguro}" vigenciax:text="{vigenvia}" telefonox:text="{telefono}" ></ListItem>
+			</ListSection>
+		</ListView>
+	</View>
+</Alloy>

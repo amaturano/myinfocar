@@ -1,0 +1,9 @@
+
+".container" : {
+  
+},
+"#lbl_titulo":{
+	font:{fontSize:30},
+	left:10,
+	top:20
+}

@@ -1,0 +1,46 @@
+<Alloy>
+	<Window class="container" onClose="cleanUp">  
+		<View id="get_service" zIndex="99" visible="false">
+			<View backgroundColor="black" opacity="0.5"></View>
+			
+		</View>
+		 
+		<View height="Ti.UI.SIZE" width="Ti.UI.SIZE" onClick="editar" bandera="0" right="5" top="0">
+			<ImageView touchEnabled="false" id="img_edit" image="/images/edit.png" height="25" width="25" right="60" top="10"></ImageView>
+			<Label touchEnabled="false" id="lbl_edit" height="30"    text="Editar" top="10" right="10" onClick="editar"></Label>
+		</View>
+		<ScrollView layout="vertical" top="40" id="main_scrll">
+			<View height="Ti.UI.SIZE" layout="vertical">
+				<ImageView image="/images/car.png" top="20" height="170" width="170"></ImageView>
+				<Button id="auto_photo" class="camera_button" top="15"></Button>
+			</View>
+			<Label class="pin_tag">Marca</Label>
+			<TextField  id="txt_na_marca" class="textfield_large" hintText="Marca"></TextField>
+			<Label class="pin_tag">Modelo</Label>
+			<TextField id="txt_na_modelo" class="textfield_large" hintText="Modelo"></TextField>
+			<Label class="pin_tag">Año</Label>
+			<TextField id="txt_na_year" class="textfield_large" hintText="Año"></TextField>
+			<Label class="pin_tag">Número de placas</Label>
+			<TextField id="txt_na_placas" class="textfield_large" hintText="No. de placas"></TextField>
+			<Label class="pin_tag">Tipo de vehículo</Label>
+			<TextField id="txt_na_tipo" class="textfield_large" hintText="Tipo: SUV, automovil, pick-up"></TextField>
+			<Label class="pin_tag">Número identificador REPUVE</Label>
+			<TextField id="txt_na_repuve" class="textfield_large" hintText="REPUVE"></TextField>
+			
+			<Button id="repuve_photo"  class="camera_button_small" top="10" title="  Agregar foto de REPUVE"></Button>
+			
+			<Label class="pin_tag">Número VIN</Label>
+			<TextField id="txt_na_vin" class="textfield_large" hintText="Numero VIN"></TextField>	
+			<Label class="title" top="20" color="Gray">Seguro automotriz</Label>
+			<Button id="btn_seguro" top="20" image="/images/plus.png" backgroundColor="transparent" title="  Agregar aseguranza" onClick="add_insurance"></Button>
+			<View height="Ti.UI.SIZE" top="20" id="vista_seguro" >
+				<Label id="lbl_aviso" textAlign="center">Sin seguro aun registrados\n haz click en el boton + para agregar uno</Label> 
+				
+			</View>
+			<Label class="title" top="20" color="Gray">Servicios realizados</Label>
+			<ImageView image="/images/servicios.png" height="70" width="70" top="10" onClick="agregarServicio"></ImageView>
+			<Label id="lbl_servicios" textAlign="center" top="10">Sin servicios aun registrados, haz click sobre el mecanico para registrar uno.</Label>
+			
+		</ScrollView>
+	</Window>
+</Alloy>

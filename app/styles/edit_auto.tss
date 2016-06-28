@@ -1,0 +1,10 @@
+
+".container" : {
+  
+},
+"#lbl_title":{
+	font:{fontSize:22},
+	color:'gray',
+	top:10,
+	left:75
+}

@@ -1,0 +1,17 @@
+<Alloy>
+	<Window class="container" onClose="cleanUp"> 
+		<ScrollView layout="vertical">
+			<View backgroundImage="/images/aseguradora.jpg" height="170" width="100%"></View>
+			<Label id="lbl_titulo">Nuevo seguro</Label>
+			<Label class="pin_tag">Nombre de la aseguranza</Label>
+			<TextField id="txt_aseguradora" class="textfield_large" ></TextField>
+			<Label class="pin_tag">Póliza o Número de seguro</Label>
+			<TextField id="txt_NoSeguro" class="textfield_large"></TextField>
+			<Label class="pin_tag">Vigencia del seguro</Label>
+			<TextField id="txt_vigencia" class="textfield_large" ></TextField>
+			<Label class="pin_tag">Número teléfonico de la aseguradora</Label>
+			<TextField id="txt_telefono" class="textfield_large"></TextField>
+			<Button top="30" title="  Guardar" image="/images/save.png" backgroundColor="transparent" onClick="save_insurance"></Button> 
+		</ScrollView>
+	</Window>
+</Alloy>

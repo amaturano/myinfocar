@@ -1,0 +1,28 @@
+<Alloy>
+	<Collection src="servicios_auto" />
+	<View height="Ti.UI.SIZE">
+		<ListView id="list_seguros" defaultItemTemplate="customTemplate" height="Ti.UI.SIZE">
+			<Templates>
+				<ItemTemplate name="customTemplate">
+					<View layout="vertical" height="Ti.UI.SIZE">
+						<Label class="subtitles">Lugar donde realizarón el servicio:</Label>
+						<Label bindId="nameInsurance" id="lbl_title" left="20" color="#009688" ></Label>
+						<Label class="subtitles">Kilometraje:</Label>
+						<Label class="normalFont" bindId="noSeguro"></Label>
+						<Label class="subtitles">Fecha del servicio:</Label>
+						<Label class="normalFont" bindId="vigenciax"></Label>
+						<Label class="subtitles">Costo:</Label>
+						<Label class="normalFont" color="red" bindId="telefonox"></Label>
+						<Label class="subtitles">Detalle:</Label>
+						<Label class="normalFont"  bindId="detallex"></Label>
+					</View>	
+					<Button bindId="eliminar"  right="10" height="30" width="30"  backgroundImage="/images/delete.png" backgroundColor="transparent"></Button>	
+				</ItemTemplate>
+			</Templates>
+			
+			<ListSection dataCollection="servicios_auto" dataFilter="filter">
+				<ListItem idx="{id}" nameInsurance:text="{empresa}" noSeguro:text="{kilometros}" vigenciax:text="{fecha}" telefonox:text="{costo}" detallex:text="{detalle}" ></ListItem>
+			</ListSection>
+		</ListView>
+	</View>
+</Alloy>

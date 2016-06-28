@@ -1,0 +1,18 @@
+
+".container" : {
+  
+},
+"#lbl_title":{
+	font:{fontSize:20},
+	top:10,
+	color:'red'
+},
+".subtitles":{
+	color:'black',
+	left:10,
+	top:10
+},
+".normalFont":{ 
+	color:'gray',
+	left:20
+}

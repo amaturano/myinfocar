@@ -1,0 +1,13 @@
+
+".container" : {
+  
+},
+"#lbl_name":{
+	font:{fontSize:28, fontFamily:"sans-serif-light"},
+	left:85, 
+	top:15, 
+	color:"black"
+},
+".title":{
+	font:{fontSize:26, fontFamily:"sans-serif-light" }
+}

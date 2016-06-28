@@ -1,0 +1,16 @@
+<Alloy>
+	<View height="Ti.UI.SIZE" width="90%" backgroundColor="white" layout="vertical">
+		<Label class="title" top="10" color="black">Agregar nuevo servicio</Label>
+		<ScrollView layout="vertical">
+			<Widget required="Campo requerido" top="20" src="input-materialdesign" titleHint="Empresa o Mecanico" id="txt_empresa"/>
+			<Widget required="Campo requerido" top="10" src="input-materialdesign" titleHint="Fecha" id="txt_fecha"/>
+			<Widget required="Campo requerido" top="10" src="input-materialdesign" titleHint="Kilometros" id="txt_kilometros"/>
+			<Widget required="Campo requerido" top="10" src="input-materialdesign" titleHint="Costo" id="txt_costo"/>
+			<Widget  top="10" src="input-materialdesign" titleHint="Detalles" id="txt_detalles"/>
+			<View height="Ti.UI.SIZE" top="30">
+				<Button image="/images/save.png" title="Guardar" onClick="save" backgroundColor="transparent" right="10"></Button>
+				<Button image="/images/cancel.png" title="Cancelar" onClick="cancel" backgroundColor="transparent" left="10"></Button>
+			</View>
+		</ScrollView>	
+	</View>
+</Alloy>
